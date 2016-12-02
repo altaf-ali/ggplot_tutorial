@@ -1,0 +1,10 @@
+This course introduces you to data visualization in R using the ggplot2 package. The ggplot2 package implements the grammar of graphics concepts for creating visually appealing and professional looking graphics in R. Basic knowledge of working with datasets in R is essential but experience with plotting functions is not required.
+
+By the end of the course you will be able to:
+
+- Create scatterplots, histograms, line graphs, and boxplots
+- Add chart labels, axis labels and legends to the plots
+- Apply statistical transformations to the plots
+- Change various attributes of plot layers including color, shape, size and scale
+- Create mutiple plots in a single figure using facets
+- Apply themes to change the appearance of the plots
