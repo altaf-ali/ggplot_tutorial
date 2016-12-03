@@ -1,0 +1,60 @@
+# Basic Plots
+
+## Loading ggplot2
+
+Like any other R package, you must load `ggplot2` using the `library` function before you can use any of the functionality that it offers.
+
+```{r}
+library(ggplot2)
+```
+
+## Dataset 
+
+Let's start by loading the housing dataset:
+
+```{r}
+housing <- read.csv("./data/landdata-states.csv")
+```
+
+Now, let's see what the dataset looks like:
+
+```{r}
+head(mtcars)
+```
+
+## Scatter Plot
+
+Everything starts with the `ggplot()` function which creates a plot object. The two arguments passed to `ggplot()` are:
+
+|Argument |Description|
+|---------|------------------------------------------------------------|
+|`data`   |Dataset for the plot. It should be a data.frame or something that can be converted to data.frame|
+|`mapping`|Aesthetic mappings for the plot|
+
+Now, let's create a scatter plot with `disp` on the x-axis and `mpg` on the y-axis. Both `disp` and `mpg` are continuous variables.
+
+```{r}
+ggplot(mtcars, aes(disp, mpg)) +
+  geom_point()
+```
+
+Now let's see which ggplot building blocks are active in the above example:
+
+![](./img/ggplot2_basics.png)
+
+## Exercise
+
+Use the [Data Visualization with ggplot2 Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf) or any other resource to find out how to complete the exercises.
+
+1. Create a line plot using the same data as above.
+
+1. Create a histogram using the horspower (`hp`) variable and selecting an appropaite bin size for the data.
+
+```{r echo = FALSE}
+ggplot(mtcars, aes(hp, mpg)) +
+  geom_point() +
+  geom_line()
+
+ggplot(mtcars, aes(hp)) +
+  geom_histogram(binwidth = 25)
+```

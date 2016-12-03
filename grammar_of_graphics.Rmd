@@ -1,0 +1,28 @@
+---
+bibliography: ["bibliography.bib"]
+biblio-style: "apalike"
+link-citations: true
+---
+
+# Grammer of Graphics
+
+| | |
+|--------------------------------------------|---------------|
+|Wilkinson, L. (2006). *The grammar of graphics*. Springer Science & Business Media.|![](./img/grammer_of_graphics.png)|
+
+## Building Blocks of a Graph
+
+  - data
+  - aesthetic mapping
+  - geometric object
+  - statistical transformations
+  - scales
+  - coordinate system
+  - position adjustments
+  - faceting
+  
+![](./img/ggplot2_blocks.png)
+
+  
+
+

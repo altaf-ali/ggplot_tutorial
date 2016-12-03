@@ -1,0 +1,37 @@
+# Getting Started
+
+## Prerequisites
+
+Basic knowledge of working with datasets in R is essential. This course assumes that you're comfortable with reading and manipulating datasets, working with script files, and navigating in RStudio. No prior experience with plotting functions in R is not required.
+
+## Software Requirements
+
+### R and RStudio
+
+Recent versions of R (version 3.2 or newer) and RStudio (version 0.99 or above) are required.
+
+You can download the latest versions from the links below:
+
+- [Download R](https://cran.r-project.org)
+- [Download RStudio](https://www.rstudio.com/products/rstudio/download)
+
+You can find out the version of R installed by typing `version` at the console:
+
+```{r}
+version
+```
+
+## Installing ggplot2
+
+If you don't have ggplot2 installed, you can install it using the `install.packages()` function:
+
+```{r eval = FALSE}
+install.packages("ggplot2")
+```
+
+You can find out the version of ggplot installed using the `packageVersion()` function:
+
+```{r}
+packageVersion("ggplot2")
+```
+

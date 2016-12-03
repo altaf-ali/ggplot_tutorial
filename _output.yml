@@ -1,0 +1,6 @@
+bookdown::gitbook:
+  config:
+    download: ["pdf"]
+
+bookdown::pdf_book:
+  keep_tex: yes
