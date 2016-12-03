@@ -1,5 +1,3 @@
-output_dir: "docs"
-
 rmd_files: [
   "index.Rmd",
   "acknowledgments.Rmd",
