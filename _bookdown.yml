@@ -18,5 +18,6 @@ rmd_files: [
   "acknowledgments.Rmd",
   "resources.Rmd",
   "getting_started.Rmd",
-  "grammar_of_graphics.Rmd"
+  "grammar_of_graphics.Rmd",
+  "basic_plots.Rmd"
 ]
