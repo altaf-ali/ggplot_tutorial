@@ -13,7 +13,7 @@ Instructor: Altaf Ali (altaf.ali.13@ucl.ac.uk)
 
 [Course Material](https://altaf-ali.github.io/ggplot_tutorial)
 
-Please make sure to complete course evaluation after the class
+Please make sure to complete course evaluation AFTER the class
 
 [Course Evaluation](http://tinyurl.com/Rdata07122016)
 
