@@ -1,5 +1,5 @@
 Package: placeholder
 Title: Does not matter.
 Version: 0.0.1
-Imports: bookdown, ggplot2
+Imports: bookdown, tidyverse, ggplot2, ggrepel, ggthemes, scales
 Remotes: altaf-ali/ggplot_tutorial
