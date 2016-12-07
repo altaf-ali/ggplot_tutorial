@@ -1,0 +1,9 @@
+---
+title: "Data Visualization in R with ggplot2"
+output: html_document
+---
+
+Please go to the following link:
+
+## [bit.ly/ggplot-intro](bit.ly/ggplot-intro) {-}
+

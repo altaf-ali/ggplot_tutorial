@@ -1,0 +1,19 @@
+---
+title: "Data Visualization in R with ggplot2"
+output: html_document
+---
+
+Instructor: Altaf Ali (altaf.ali.13@ucl.ac.uk)
+:   PhD. Candidate and Teaching Fellow in Political Science
+
+- You are strongly encouraged to work in pairs, so say hello to your neighbour
+- 10 minute break at the halfway point
+- You can use your own dataset in the second half of the class if you want
+- Solutions to exercises will be provided after the class
+
+[Course Material](https://www.ucl.ac.uk/~uctqiax/ggplot/)
+
+Please make sure to complete course evaluation after the class
+
+[Course Evaluation](http://tinyurl.com/Rdata07122016)
+

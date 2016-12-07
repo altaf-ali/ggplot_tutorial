@@ -45,11 +45,3 @@ install.packages("ggrepel")
 install.packages("ggthemes")
 ```
 
-## Recommended Packages
-
-The `tidyverse` collection of packages from Hadley Wickham (author of `ggplot2`) are highly recommended for general data manipulation tasks:
-
-```{r eval = FALSE}
-install.packages("tidyverse")
-```
-

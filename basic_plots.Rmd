@@ -16,7 +16,7 @@ library(scales)
 Let's start by loading the housing dataset:
 
 ```{r}
-housing <- read.csv("./data/housing.csv")
+housing <- read.csv("https://altaf-ali.github.io/ggplot_tutorial/data/housing.csv")
 ```
 
 Now, let's see what the dataset looks like:
