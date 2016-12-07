@@ -11,7 +11,7 @@ Instructor: Altaf Ali (altaf.ali.13@ucl.ac.uk)
 - You can use your own dataset in the second half of the class if you want
 - Solutions to exercises will be provided after the class
 
-[Course Material](https://www.ucl.ac.uk/~uctqiax/ggplot/)
+[Course Material](https://altaf-ali.github.io/ggplot_tutorial)
 
 Please make sure to complete course evaluation after the class
 

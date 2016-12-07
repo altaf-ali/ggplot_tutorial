@@ -1,4 +1,4 @@
-rmd_files_all: [
+rmd_files: [
   "index.Rmd",
   "acknowledgments.Rmd",
   "resources.Rmd",
@@ -13,12 +13,3 @@ rmd_files_all: [
   "challenge.Rmd"
 ]
 
-rmd_files: [
-  "index.Rmd",
-  "acknowledgments.Rmd",
-  "resources.Rmd",
-  "getting_started.Rmd",
-  "grammar_of_graphics.Rmd",
-  "basic_plots.Rmd",
-  "geom_stat.Rmd"
-]
