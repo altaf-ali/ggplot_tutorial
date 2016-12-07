@@ -76,7 +76,7 @@ head(econ)
                    breaks = 1:10) +
       scale_y_continuous(name = "Human Development Index, 2011 (1=Best)",
                          limits = c(0.2, 1.0),
-                         breaks = seq(0.2, 1.0, by = 0.1))
+                         breaks = seq(0.2, 1.0, by = 0.1)) +
       scale_colour_brewer(palette="Dark2") 
     ```
 
