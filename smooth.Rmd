@@ -23,6 +23,7 @@ We can also specify the formula for the model
 ```{r}
 ggplot(housing2001q1, aes(x = Land.Value, y = Structure.Cost)) + 
   geom_point() +
+  scale_x_log10() +
   stat_smooth(method = "lm", formula = y ~ log(x))
 ```
 
@@ -31,6 +32,7 @@ We can turn the turn off the confidence interval
 ```{r}
 ggplot(housing2001q1, aes(x = Land.Value, y = Structure.Cost)) + 
   geom_point() +
+  scale_x_log10() +
   stat_smooth(method = "lm", formula = y ~ log(x), se = FALSE)
 ```
 
@@ -39,6 +41,7 @@ Formula is specific to the type of model used. Here we're using a General Additi
 ```{r}
 ggplot(housing2001q1, aes(x = Land.Value, y = Structure.Cost)) + 
   geom_point() +
+  scale_x_log10() +
   stat_smooth(method = "gam", formula = y ~ s(x,k=10))
 ```
 

@@ -61,7 +61,7 @@ head(econ)
     ggplot(econ, aes(x = CPI, y = HDI, color = Region)) + 
       geom_point(shape = 1, stroke = 1, size = 2.5) +
       geom_text_repel(aes(label = Country), data = labeled_countries, force = 10) +
-      stat_smooth(method = "lm", formula = y ~ log(x), se = FALSE, color = "red", size = 0.5)
+      stat_smooth(method = "lm", formula = y ~ log(x), se = FALSE, color = "red", size = 0.5) 
     ```
 
 1. Adjust the x and y scales
@@ -115,6 +115,7 @@ head(econ)
       scale_y_continuous(name = "Human Development Index, 2011 (1=Best)",
                          limits = c(0.2, 1.0),
                          breaks = seq(0.2, 1.0, by = 0.1)) +
+      scale_colour_brewer(palette="Dark2") +
       theme_minimal() +
       theme(
         plot.title=element_text(hjust=0.5, size = 16),
@@ -126,6 +127,6 @@ head(econ)
         panel.grid.major.x = element_blank()
       ) +
       guides(colour = guide_legend(nrow = 1)) +
-      ggtitle("Corruption and Human development")
+      ggtitle("Corruption and Human development") +
     ```
 
