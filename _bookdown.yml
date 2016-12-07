@@ -1,4 +1,4 @@
-rmd_files_all: [
+rmd_files: [
   "index.Rmd",
   "acknowledgments.Rmd",
   "resources.Rmd",
@@ -13,7 +13,7 @@ rmd_files_all: [
   "challenge.Rmd"
 ]
 
-rmd_files: [
+rmd_filesx: [
   "index.Rmd",
   "acknowledgments.Rmd",
   "resources.Rmd",
