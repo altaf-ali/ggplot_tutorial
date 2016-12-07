@@ -1,4 +1,4 @@
-rmd_files: [
+xrmd_files: [
   "index.Rmd",
   "acknowledgments.Rmd",
   "resources.Rmd",
@@ -11,4 +11,9 @@ rmd_files: [
   "theme.Rmd",
   "facets.Rmd",
   "challenge.Rmd"
+]
+
+rmd_files: [
+  "index.Rmd",
+  "acknowledgments.Rmd"
 ]
