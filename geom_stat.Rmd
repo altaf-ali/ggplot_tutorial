@@ -1,0 +1,87 @@
+# Geoms and Statistics
+
+Geometric objects (geoms) define the basic shape of the elements on the plot. 
+
+- Every geom has a default statistic
+- Every statistic has a default geom
+
+You can get a list of all geoms using the online help in RStudio
+
+```{r}
+help.search("geom_", package = "ggplot2")
+```
+
+Change the size of each bin:
+
+```{r}
+ggplot(housing, aes(x = Home.Value)) +
+  geom_histogram(binwidth = 1000)
+```
+
+Add a mapping for the fill color:
+
+```{r}
+ggplot(housing, aes(x = Home.Value, fill = Region)) +
+  geom_histogram(binwidth = 1000)
+```
+
+Mapping can also be specified in the geom:
+
+```{r}
+ggplot(housing, aes(x = Home.Value)) +
+  geom_histogram(aes(fill = Region), binwidth = 1000)
+```
+
+
+Same plot can also be created using `stat_bin` transformation. The default geom for stat_bin is "area"
+
+```{r}
+ggplot(housing, aes(x = Home.Value)) +
+  stat_bin(binwidth = 1000)
+```
+
+Change the default geom to `"point"`
+
+```{r}
+ggplot(housing, aes(x = Home.Value)) +
+  stat_bin(geom = "point", binwidth = 1000)
+```
+
+Change the default geom to `"line"`
+
+```{r}
+ggplot(housing, aes(x = Home.Value)) +
+  stat_bin(geom = "line", binwidth = 1000)
+```
+
+## Exercise
+
+Create a subset of housing data from New York since 2000
+
+```{r}
+newyork2k <- subset(newyork, Year >= 2000)
+```
+
+1. Create a plot that includes multiple geometric objects, for example, lines and points.
+
+    ```{r echo = FALSE}
+    ggplot(newyork2k, aes(x = Date, y = Home.Value)) +
+      geom_line() +
+      geom_point()
+    ```
+
+1. Change the shape to be hollow diamond
+
+    HINT: Take a look at **Shape Scales** in the [Data Visualization with ggplot2 Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
+
+    ```{r echo = FALSE}
+    ggplot(newyork2k, aes(x = Date, y = Home.Value)) +
+      geom_point(shape = 5)
+    ```
+
+1. Change the size of the point based on `Land.Value` and color based on `Structure.Cost`
+
+    ```{r echo = FALSE}
+    ggplot(newyork2k, aes(x = Date, y = Home.Value)) +
+      geom_point(aes(size = Land.Value, color = Structure.Cost))
+    ```

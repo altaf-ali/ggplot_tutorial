@@ -4,5 +4,11 @@ rmd_files: [
   "resources.Rmd",
   "getting_started.Rmd",
   "grammar_of_graphics.Rmd",
-  "basic_plots.Rmd"
+  "basic_plots.Rmd",
+  "geom_stat.Rmd",
+  "scales.Rmd",
+  "smooth.Rmd",
+  "theme.Rmd",
+  "facets.Rmd",
+  "challenge.Rmd"
 ]

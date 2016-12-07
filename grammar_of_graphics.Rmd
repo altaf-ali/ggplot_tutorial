@@ -12,14 +12,14 @@ link-citations: true
 
 ## Building Blocks of a Graph
 
-  - data
-  - aesthetic mapping
-  - geometric object
-  - statistical transformations
-  - scales
-  - coordinate system
-  - position adjustments
-  - faceting
+  - Data
+  - Aesthetic mapping
+  - Geometric object
+  - Statistical transformations
+  - Scales
+  - Coordinate system
+  - Position adjustments
+  - Faceting
   
 ![](./img/ggplot2_blocks.png)
 

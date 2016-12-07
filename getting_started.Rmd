@@ -35,3 +35,21 @@ You can find out the version of ggplot installed using the `packageVersion()` fu
 packageVersion("ggplot2")
 ```
 
+## Installing ggplot2 Extentions
+
+We need the following ggplot extensions for this tutorial:
+
+```{r eval = FALSE}
+install.packages("scales")
+install.packages("ggrepel")
+install.packages("ggthemes")
+```
+
+## Recommended Packages
+
+The `tidyverse` collection of packages from Hadley Wickham (author of `ggplot2`) are highly recommended for general data manipulation tasks:
+
+```{r eval = FALSE}
+install.packages("tidyverse")
+```
+

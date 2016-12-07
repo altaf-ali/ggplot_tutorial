@@ -2,8 +2,8 @@
 
 - [Google](http://www.google.com)
 
-- [ggplot Documentation](http://docs.ggplot2.org)
 - [Data Visualization with ggplot2 Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
+- [ggplot2 Documentation](http://docs.ggplot2.org)
 
 - [R Graphics Cookbook](https://ase.tufts.edu/bugs/guide/assets/R%20Graphics%20Cookbook.pdf)
 - [ggplot2 tutorial from Harvard University](http://tutorials.iq.harvard.edu/R/Rgraphics/Rgraphics.html)

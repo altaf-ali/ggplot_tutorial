@@ -2,10 +2,13 @@
 
 ## Loading ggplot2
 
-Like any other R package, you must load `ggplot2` using the `library` function before you can use any of the functionality that it offers.
+Like any other R package, you must load `ggplot2` using the `library` function before you can use any of the functionality that it offers. We will also load the extensions that provide additional features:
 
 ```{r}
 library(ggplot2)
+library(ggrepel)
+library(ggthemes)
+library(scales)
 ```
 
 ## Dataset 
@@ -13,28 +16,41 @@ library(ggplot2)
 Let's start by loading the housing dataset:
 
 ```{r}
-housing <- read.csv("./data/landdata-states.csv")
+housing <- read.csv("./data/housing.csv")
 ```
 
 Now, let's see what the dataset looks like:
 
 ```{r}
-head(mtcars)
+head(housing)
+```
+
+When dealing with date and time values, it's generally a good idea to convert them to the appropriate data type. 
+
+```{r}
+housing$Date <- as.Date(housing$Date)
+```
+
+Next, we create two subsets of the data, one with housing prices only from New York, and another one with housing prices from 9 states in the North East.
+
+```{r}
+newyork <- subset(housing, State == "NY")
+northeast <- subset(housing, Region == "N. East")
 ```
 
 ## Scatter Plot
 
-Everything starts with the `ggplot()` function which creates a plot object. The two arguments passed to `ggplot()` are:
+Now we're ready to plot. Everything starts with the `ggplot()` function which creates a plot object. The two arguments passed to `ggplot()` are:
 
 |Argument |Description|
 |---------|------------------------------------------------------------|
 |`data`   |Dataset for the plot. It should be a data.frame or something that can be converted to data.frame|
 |`mapping`|Aesthetic mappings for the plot|
 
-Now, let's create a scatter plot with `disp` on the x-axis and `mpg` on the y-axis. Both `disp` and `mpg` are continuous variables.
+Using the `newyork` dataset, let's create a scatter plot with `Date` on the x-axis and `Home.Value` on the y-axis.
 
 ```{r}
-ggplot(mtcars, aes(disp, mpg)) +
+ggplot(newyork, aes(x = Date, y = Home.Value)) +
   geom_point()
 ```
 
@@ -42,19 +58,42 @@ Now let's see which ggplot building blocks are active in the above example:
 
 ![](./img/ggplot2_basics.png)
 
+|       |    |
+|-------|----|
+|Data   |`newyork`|
+|Mapping|`aes(x = Date, y = Home.Value)`|
+|Geom   |`geom_point()`|
+
 ## Exercise
 
 Use the [Data Visualization with ggplot2 Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf) or any other resource to find out how to complete the exercises.
 
-1. Create a line plot using the same data as above.
+1. Create a histogram of `Home.Value` using the `housing` data.
 
-1. Create a histogram using the horspower (`hp`) variable and selecting an appropaite bin size for the data.
+    ```{r echo = FALSE}
+    ggplot(housing, aes(x = Home.Value)) +
+      geom_histogram(binwidth = 10000)
+    ```
 
-```{r echo = FALSE}
-ggplot(mtcars, aes(hp, mpg)) +
-  geom_point() +
-  geom_line()
+1. Create a box plot of `Home.Value` using `northeast` dataset with `State` on the x-axis
 
-ggplot(mtcars, aes(hp)) +
-  geom_histogram(binwidth = 25)
-```
+    ```{r echo = FALSE}
+    ggplot(northeast, aes(x = State, y = Home.Value)) +
+      geom_boxplot() 
+    ```
+
+1. Create a line plot using `newyork` dataset with `Date` on the x-axis and `Home.Value` on the y-axis
+
+    ```{r echo = FALSE}
+    ggplot(newyork, aes(x = Date, y = Home.Value)) +
+      geom_line()
+    ```
+
+1. Create a line plot using `northeast` dataset with `Date` on the x-axis and `Home.Value` on the y-axis and use a different color for each state
+
+    ```{r echo = FALSE}
+    ggplot(northeast, aes(x = Date, y = Home.Value, col = State)) +
+      geom_line()
+    ```
+
+
