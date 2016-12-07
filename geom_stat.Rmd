@@ -7,7 +7,7 @@ Geometric objects (geoms) define the basic shape of the elements on the plot.
 
 You can get a list of all geoms using the online help in RStudio
 
-```{r}
+```{r eval = FALSE}
 help.search("geom_", package = "ggplot2")
 ```
 
