@@ -20,23 +20,23 @@ head(econ)
 1. Color the points based on `Region` using hollow points
 
     ```{r echo = FALSE}
-    ggplot(econ, aes(x = CPI, y = HDI, color = Region)) + 
-      geom_point(shape = 1)
+    ggplot(econ, aes(x = CPI, y = HDI)) + 
+      geom_point(aes(color = Region), shape = 1)
     ```
 
 1. Add a trend line
 
     ```{r echo = FALSE}
-    ggplot(econ, aes(x = CPI, y = HDI, color = Region)) + 
-      geom_point(shape = 1) +
+    ggplot(econ, aes(x = CPI, y = HDI)) + 
+      geom_point(aes(color = Region), shape = 1) +
       stat_smooth(method = "lm", formula = y ~ log(x), se = FALSE, color = "red")
     ```
 
 1. The trend line is too thick compared to the circles so we need to adjust it appropriately
 
     ```{r echo = FALSE}
-    ggplot(econ, aes(x = CPI, y = HDI, color = Region)) + 
-      geom_point(shape = 1, stroke = 1, size = 2.5) +
+    ggplot(econ, aes(x = CPI, y = HDI)) + 
+      geom_point(aes(color = Region), shape = 1, stroke = 1, size = 2.5) +
       stat_smooth(method = "lm", formula = y ~ log(x), se = FALSE, color = "red", size = 0.5)
     ```
 
@@ -58,8 +58,8 @@ head(econ)
 
 
     ```{r echo = FALSE}
-    ggplot(econ, aes(x = CPI, y = HDI, color = Region)) + 
-      geom_point(shape = 1, stroke = 1, size = 2.5) +
+    ggplot(econ, aes(x = CPI, y = HDI)) + 
+      geom_point(aes(color = Region), shape = 1, stroke = 1, size = 2.5) +
       geom_text_repel(aes(label = Country), data = labeled_countries, force = 10) +
       stat_smooth(method = "lm", formula = y ~ log(x), se = FALSE, color = "red", size = 0.5) 
     ```
@@ -67,8 +67,8 @@ head(econ)
 1. Adjust the x and y scales and use [Color Brewer](http://colorbrewer2.org) pallete `Dark2`.
 
     ```{r echo = FALSE}
-    ggplot(econ, aes(x = CPI, y = HDI, color = Region)) + 
-      geom_point(shape = 1, stroke = 1, size = 2.5) +
+    ggplot(econ, aes(x = CPI, y = HDI)) + 
+      geom_point(aes(color = Region), shape = 1, stroke = 1, size = 2.5) +
       geom_text_repel(aes(label = Country), data = labeled_countries, force = 10, color = "gray20") +
       stat_smooth(method = "lm", formula = y ~ log(x), se = FALSE, color = "red", size = 0.5) +
       scale_x_continuous(name = "Corruption Perceptions Index, 2011 (10=least corrupt)",
@@ -83,8 +83,8 @@ head(econ)
 1. Remove vertical grid lines and move the legend
 
     ```{r echo = FALSE}
-    ggplot(econ, aes(x = CPI, y = HDI, color = Region)) + 
-      geom_point(shape = 1, stroke = 1, size = 2.5) +
+    ggplot(econ, aes(x = CPI, y = HDI)) + 
+      geom_point(aes(color = Region), shape = 1, stroke = 1, size = 2.5) +
       geom_text_repel(aes(label = Country), data = labeled_countries, force = 10, color = "gray20") +
       stat_smooth(method = "lm", formula = y ~ log(x), se = FALSE, color = "red", size = 0.5) +
       scale_x_continuous(name = "Corruption Perceptions Index, 2011 (10=least corrupt)",
@@ -107,8 +107,8 @@ head(econ)
 1. Add title "Corruption and Human development"
 
     ```{r echo = FALSE}
-    ggplot(econ, aes(x = CPI, y = HDI, color = Region)) + 
-      geom_point(shape = 1, stroke = 1, size = 2.5) +
+    ggplot(econ, aes(x = CPI, y = HDI)) + 
+      geom_point(aes(color = Region), shape = 1, stroke = 1, size = 2.5) +
       geom_text_repel(aes(label = Country), data = labeled_countries, force = 10, color = "gray20") +
       stat_smooth(method = "lm", formula = y ~ log(x), se = FALSE, color = "red", size = 0.5) +
       scale_x_continuous(name = "Corruption Perceptions Index, 2011 (10=least corrupt)",
