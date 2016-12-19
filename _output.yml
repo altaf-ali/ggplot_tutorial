@@ -1,6 +1,8 @@
 bookdown::gitbook:
+  css: css/readthedocs.css
   config:
     download: ["pdf"]
 
 bookdown::pdf_book:
   keep_tex: yes
+
