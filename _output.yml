@@ -2,6 +2,9 @@ bookdown::gitbook:
   css: css/readthedocs.css
   config:
     download: ["pdf"]
+    sharing:
+      github: yes
+      facebook: no
 
 bookdown::pdf_book:
   keep_tex: yes
