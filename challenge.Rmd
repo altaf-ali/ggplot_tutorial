@@ -44,7 +44,7 @@ head(econ)
 
     HINT: Create a subset of countries to label since we don't want to label every point
 
-    ```{r echo = FALSE}
+    ```{r}
     target_countries <- c(
       "Russia", "Venezuela", "Iraq", "Myanmar", "Sudan",
       "Afghanistan", "Congo", "Greece", "Argentina", "Brazil",

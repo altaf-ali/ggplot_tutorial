@@ -19,4 +19,4 @@ By the end of the course you will be able to:
 
 ----
 
-*Last Updated: `r format(Sys.time(), "%b %d, %Y %I:%M %p")`*
+*Last Updated: `r format(Sys.time(), "%b %d, %Y %l:%M %p")`*

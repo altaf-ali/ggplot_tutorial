@@ -1,9 +1,14 @@
 .book .book-summary {
   border-right: 0;
-  background: #253939;
 }
 
-.book .book-summary ul.summary li a {
+.book .book-summary,
+.book .book-summary ul.summary li.active li a {
+  background: #06202d;
+}
+
+.book .book-summary ul.summary li a,
+.book .book-summary ul.summary li.active li a {
   color: #b3b3b3;
 }
 
@@ -11,15 +16,9 @@
   padding-left: 0;
 }
 
-.book .book-summary ul.summary li.active li a {
-  color: #b3b3b3;
-  background: #253939;
-  padding-left: 30px;
-}
-
 .book .book-summary ul.summary li.active a {
   color: black;
-  background: white;
+  background: #1889c0;
 }
 
 .book .book-summary ul.summary li a {
@@ -27,14 +26,15 @@
   padding-bottom: 8px;
 }
 
-.book .book-summary ul.summary li li a {
+.book .book-summary ul.summary li li a,
+.book .book-summary ul.summary li.active li a {
   padding-left: 30px;
 }
 
-
-.book .book-summary ul.summary li a:hover {
-  color: #404040;
-  background: #b0b0b0;
+.book .book-summary ul.summary li a:hover,
+.book .book-summary ul.summary li.active a:hover {
+  color: white;
+  background: #093043;
 }
 
 .book .book-body .page-wrapper .page-inner section.normal pre {
