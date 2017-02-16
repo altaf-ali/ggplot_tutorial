@@ -1,8 +1,14 @@
 language: r
-cache: packages
+
+cache:
+  packages: yes
+  directories:
+    - $TRAVIS_BUILD_DIR/_bookdown_files
 
 env:
   global:
+    - GIT_AUTHOR_NAME: "Altaf Ali"
+    - GIT_AUTHOR_EMAIL: "altaf@fastmail.com"
     - secure: "eXSysOFGzQWx2qbxHOoOaTptEUsrIaaUMgbVI79GwdN6CBvMq5J00agLCDv0C3zS369iFMV7E7h4eVEoQ4h9x9wfJB5mAW7yUbuv5xyVSOybIKtuNAy8qT/otqJPQPnyiBgZtLPRMQE0HC98OT2ApTF4Y7g39S+MoO+Ftk6hnTA0JMSydvLeDiZ+FAFffBDkIi4MaL7e8ngXkrcHAXCBvQgd+c9FzEdn/51mdcP/7Fvk2OGHuuIS64dxF3vW1pE5VYUKa2rvwbZDkOsYTAabpumlWw13JgQSPDxDkh3ZnBIMA4r5uWp27lQFy4Xhvx2iFfKqZlfe4+DLmebyTFFbfa40DK+/KuPg69il4T5DnVK3Igs3ajf7aKAh1UVTqZGTszAst1+WVzTKpghFA0pAS7EevxDAo7a/ZJQGBmetYp6P/luN3JAcujjYMAqu7QWWRTiMopBJwhaSIeVVPgVginm6/vIZf8nSz4dZhDIbShxOrEBbMYSUwcIn4oB/hQArhdiZOg24x5rDb1K8pIEHPcAK6h53njdlIuxn87m2un9VY0ojRwzwkg+SPm7zSTohjgfAWyqrygnVSZwvMq0iir+bkCw+hDIUYDXJ9wSDpKQ2UrMIFxHu3/JUH4x1Do4eXKy1873V/SgN1blc8hrDGFjZcvai+fW3vxgKJZZw+Qc="
 
 before_script:
