@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-Basic knowledge of working with datasets in R is essential. This course assumes that you're comfortable with reading and manipulating datasets, working with script files, and navigating in RStudio. No prior experience with plotting functions in R is not required.
+Basic knowledge of working with datasets in R is essential. This course assumes that you're comfortable with reading and manipulating datasets, working with script files, and navigating in RStudio. Experience with plotting functions in R is helpful but not required.
 
 ## Software Requirements
 
