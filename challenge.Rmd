@@ -64,7 +64,7 @@ head(econ)
       stat_smooth(method = "lm", formula = y ~ log(x), se = FALSE, color = "red", size = 0.5) 
     ```
 
-1. Adjust the x and y scales and use [Color Brewer](http://colorbrewer2.org) pallete `Dark2`.
+1. Adjust the x and y scales and use [Color Brewer](http://colorbrewer2.org) pallete `Paired`.
 
     ```{r echo = FALSE}
     ggplot(econ, aes(x = CPI, y = HDI)) + 
@@ -77,7 +77,7 @@ head(econ)
       scale_y_continuous(name = "Human Development Index, 2011 (1=Best)",
                          limits = c(0.2, 1.0),
                          breaks = seq(0.2, 1.0, by = 0.1)) +
-      scale_colour_brewer(palette="Dark2") 
+      scale_colour_brewer(palette="Paired", direction = 1) 
     ```
 
 1. Remove vertical grid lines and move the legend
@@ -93,7 +93,7 @@ head(econ)
       scale_y_continuous(name = "Human Development Index, 2011 (1=Best)",
                          limits = c(0.2, 1.0),
                          breaks = seq(0.2, 1.0, by = 0.1)) +
-      scale_colour_brewer(palette="Dark2") +
+      scale_colour_brewer(palette="Paired", direction = 1) +
       theme_minimal() +
       theme(
         legend.position = c("top"),
@@ -117,7 +117,7 @@ head(econ)
       scale_y_continuous(name = "Human Development Index, 2011 (1=Best)",
                          limits = c(0.2, 1.0),
                          breaks = seq(0.2, 1.0, by = 0.1)) +
-      scale_colour_brewer(palette="Dark2") +
+      scale_colour_brewer(palette="Paired", direction = 1) +
       theme_minimal() +
       theme(
         plot.title=element_text(hjust=0.5, size = 16),

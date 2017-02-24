@@ -1,8 +1,0 @@
----
-output: html_document
----
-
-#### Please go to the following link: {-}
-
-### http://bit.ly/ggplot-intro {-}
-
