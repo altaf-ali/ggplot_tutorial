@@ -5,7 +5,7 @@
 ![](./img/economist.png)
 
 ```{r}
-econ <- read.csv("https://altaf-ali.github.io/ggplot_tutorial/data/economist.csv")
+econ <- read.csv("https://raw.githubusercontent.com/altaf-ali/ggplot_tutorial/master/data/economist.csv")
 
 head(econ)
 ```
