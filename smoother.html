@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Data Visualization in R with ggplot2</title>
+  <meta name="description" content="Data Visualization in R with ggplot2">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Data Visualization in R with ggplot2" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="altaf-ali/ggplot_tutorial" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Data Visualization in R with ggplot2" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="text-and-labels.html">
+<link rel="next" href="theme-and-title.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="css/readthedocs.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="acknowledgments.html"><a href="acknowledgments.html"><i class="fa fa-check"></i><b>2</b> Acknowledgments</a></li>
+<li class="chapter" data-level="3" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>3</b> Resources</a></li>
+<li class="chapter" data-level="4" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>4</b> Getting Started</a><ul>
+<li class="chapter" data-level="4.1" data-path="getting-started.html"><a href="getting-started.html#prerequisites"><i class="fa fa-check"></i><b>4.1</b> Prerequisites</a></li>
+<li class="chapter" data-level="4.2" data-path="getting-started.html"><a href="getting-started.html#software-requirements"><i class="fa fa-check"></i><b>4.2</b> Software Requirements</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="getting-started.html"><a href="getting-started.html#r-and-rstudio"><i class="fa fa-check"></i><b>4.2.1</b> R and RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="getting-started.html"><a href="getting-started.html#installing-ggplot2"><i class="fa fa-check"></i><b>4.3</b> Installing ggplot2</a></li>
+<li class="chapter" data-level="4.4" data-path="getting-started.html"><a href="getting-started.html#installing-ggplot2-extentions"><i class="fa fa-check"></i><b>4.4</b> Installing ggplot2 Extentions</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="grammer-of-graphics.html"><a href="grammer-of-graphics.html"><i class="fa fa-check"></i><b>5</b> Grammer of Graphics</a><ul>
+<li class="chapter" data-level="5.1" data-path="grammer-of-graphics.html"><a href="grammer-of-graphics.html#building-blocks-of-a-graph"><i class="fa fa-check"></i><b>5.1</b> Building Blocks of a Graph</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="basic-plots.html"><a href="basic-plots.html"><i class="fa fa-check"></i><b>6</b> Basic Plots</a><ul>
+<li class="chapter" data-level="6.1" data-path="basic-plots.html"><a href="basic-plots.html#loading-ggplot2"><i class="fa fa-check"></i><b>6.1</b> Loading ggplot2</a></li>
+<li class="chapter" data-level="6.2" data-path="basic-plots.html"><a href="basic-plots.html#dataset"><i class="fa fa-check"></i><b>6.2</b> Dataset</a></li>
+<li class="chapter" data-level="6.3" data-path="basic-plots.html"><a href="basic-plots.html#scatter-plot"><i class="fa fa-check"></i><b>6.3</b> Scatter Plot</a></li>
+<li class="chapter" data-level="6.4" data-path="basic-plots.html"><a href="basic-plots.html#exercise"><i class="fa fa-check"></i><b>6.4</b> Exercise</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="geoms-and-statistics.html"><a href="geoms-and-statistics.html"><i class="fa fa-check"></i><b>7</b> Geoms and Statistics</a><ul>
+<li class="chapter" data-level="7.1" data-path="geoms-and-statistics.html"><a href="geoms-and-statistics.html#exercise-1"><i class="fa fa-check"></i><b>7.1</b> Exercise</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="scales.html"><a href="scales.html"><i class="fa fa-check"></i><b>8</b> Scales</a></li>
+<li class="chapter" data-level="9" data-path="text-and-labels.html"><a href="text-and-labels.html"><i class="fa fa-check"></i><b>9</b> Text and Labels</a></li>
+<li class="chapter" data-level="10" data-path="smoother.html"><a href="smoother.html"><i class="fa fa-check"></i><b>10</b> Smoother</a></li>
+<li class="chapter" data-level="11" data-path="theme-and-title.html"><a href="theme-and-title.html"><i class="fa fa-check"></i><b>11</b> Theme and Title</a></li>
+<li class="chapter" data-level="12" data-path="facets.html"><a href="facets.html"><i class="fa fa-check"></i><b>12</b> Facets</a></li>
+<li class="chapter" data-level="13" data-path="challenge.html"><a href="challenge.html"><i class="fa fa-check"></i><b>13</b> Challenge</a><ul>
+<li class="chapter" data-level="13.1" data-path="challenge.html"><a href="challenge.html#recreating-the-economist-graph"><i class="fa fa-check"></i><b>13.1</b> Recreating the Economist Graph</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Visualization in R with ggplot2</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="smoother" class="section level1">
+<h1><span class="header-section-number">10</span> Smoother</h1>
+<p>Let’s continue with the 2001 first quarter dataset and add a smoother.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(housing2001q1, <span class="kw">aes</span>(<span class="dt">x =</span> Land.Value, <span class="dt">y =</span> Structure.Cost)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_point</span>() +<span class="st"> </span>
+<span class="st">  </span><span class="kw">scale_x_log10</span>() +
+<span class="st">  </span><span class="kw">stat_smooth</span>()</code></pre></div>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39;</code></pre>
+<p><img src="ggplot_tutorial_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
+<p>We can fit a linear model to our dataset</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(housing2001q1, <span class="kw">aes</span>(<span class="dt">x =</span> Land.Value, <span class="dt">y =</span> Structure.Cost)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_point</span>() +
+<span class="st">  </span><span class="kw">scale_x_log10</span>() +
+<span class="st">  </span><span class="kw">stat_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>)</code></pre></div>
+<p><img src="ggplot_tutorial_files/figure-html/unnamed-chunk-36-1.png" width="672" /></p>
+<p>We can also specify the formula for the model</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(housing2001q1, <span class="kw">aes</span>(<span class="dt">x =</span> Land.Value, <span class="dt">y =</span> Structure.Cost)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_point</span>() +
+<span class="st">  </span><span class="kw">scale_x_log10</span>() +
+<span class="st">  </span><span class="kw">stat_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">formula =</span> y ~<span class="st"> </span><span class="kw">log</span>(x))</code></pre></div>
+<p><img src="ggplot_tutorial_files/figure-html/unnamed-chunk-37-1.png" width="672" /></p>
+<p>We can turn the turn off the confidence interval</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(housing2001q1, <span class="kw">aes</span>(<span class="dt">x =</span> Land.Value, <span class="dt">y =</span> Structure.Cost)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_point</span>() +
+<span class="st">  </span><span class="kw">scale_x_log10</span>() +
+<span class="st">  </span><span class="kw">stat_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">formula =</span> y ~<span class="st"> </span><span class="kw">log</span>(x), <span class="dt">se =</span> <span class="ot">FALSE</span>)</code></pre></div>
+<p><img src="ggplot_tutorial_files/figure-html/unnamed-chunk-38-1.png" width="672" /></p>
+<p>Formula is specific to the type of model used. Here we’re using a General Additive Model (GAM).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(housing2001q1, <span class="kw">aes</span>(<span class="dt">x =</span> Land.Value, <span class="dt">y =</span> Structure.Cost)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_point</span>() +
+<span class="st">  </span><span class="kw">scale_x_log10</span>() +
+<span class="st">  </span><span class="kw">stat_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;gam&quot;</span>, <span class="dt">formula =</span> y ~<span class="st"> </span><span class="kw">s</span>(x,<span class="dt">k=</span><span class="dv">10</span>))</code></pre></div>
+<p><img src="ggplot_tutorial_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="text-and-labels.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="theme-and-title.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": false,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": {}
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": ["ggplot_tutorial.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
